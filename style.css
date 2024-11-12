@@ -1,125 +1,136 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar{
-    background-color:dodgerblue;
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.navbar {
+    background-color: dodgerblue;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 60px;
+    position: fixed;
     top: 0;
     z-index: 1000;
-    position: fixed;
     padding: 0 20px;
 }
 
-.navmenu{
+.navmenu {
     display: flex;
     list-style: none;
-    float: right;
-    gap: 50px;
+    gap: 30px;
 }
 
-.logo img{
-    margin-top: 3px;
+.logo img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
 }
 
-.navlinks{
+.navlinks {
     text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
+    color: white;
     padding: 10px 15px;
-    color: black;
     border-radius: 10px;
+    transition: background 0.3s ease;
 }
 
-.navlinks:hover{
-    background-color: black;
+.navlinks:hover {
+    background-color: white;
     color: dodgerblue;
 }
 
-.menuicons{
+.menuicons {
     font-size: xx-large;
-    display: none;  
-    justify-content: flex-end;
+    display: none;
+    cursor: pointer;
+    color: white;
 }
 
-#close{
+#close {
     display: none;
 }
 
-main{
-    width: min(90%, 600px);
+main {
+    width: min(90%, 700px);
     max-width: 100%;
     background-color: #141414;
     border-radius: 16px;
     display: flex;
     color: #fff;
     margin: 6rem auto;
+    padding: 20px;
     align-items: center;
+    gap: 20px;
 }
 
-section{
+section {
     width: 50%;
-    height: auto;
     background-color: #191919;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 16px; /* 16px == 1rem*/
+    border-radius: 16px;
+    padding: 20px;
 }
 
-img{
+img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 2px solid #00A3FF;
+    border: 3px solid #00A3FF;
     object-fit: cover;
 }
 
-p {
-    font-size: 16px; /* Base font size */
-    line-height: 1.6; /* Line height for better readability */
-}
-
-article{
-    width: 60%;
+article {
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 36px;
+    gap: 20px;
 }
 
-.name{
-    margin-top: 30px;
+.name h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.social{
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.social {
     background-color: black;
-    padding: 5px;
+    padding: 10px;
     text-align: center;
+    border-radius: 10px;
 }
-.sociallinks{
+
+.sociallinks {
     color: dodgerblue;
-    margin: 0 10px;
-    padding: 0 10px;
-    font-size: 20px;
-    display: inline-block;
+    margin: 0 8px;
+    font-size: 24px;
+    transition: color 0.3s ease;
     text-decoration: none;
+}
+
+.sociallinks:hover {
+    color: #00A3FF;
 }
 
 @media (max-width: 750px) {
     .menuicons {
         display: block;
-        font-size: larger;
     }
 
     .navmenu {
@@ -132,53 +143,35 @@ article{
         background-color: dodgerblue;
         display: none;
     }
-    
+
     .navmenu.active {
         display: block;
-    }
-
-    .navlinks {
-        display: inline-block; 
     }
 
     main {
         flex-direction: column;
     }
 
-    article, .image{
+    section, article {
+        width: 100%;
         text-align: center;
-        margin: 0 auto;
-        gap: 25px;
     }
 
-    article, .sociallinks{
-        padding: 5px;
-    }
-
-    .image{
-        margin-top: 5%;
-        background-color: transparent;
-    }
-
-    .name{
-        margin-top: 0;
+    .name {
+        margin-top: 10px;
     }
 
     p {
-        font-size: 16px; /* Decrease font size for smaller screens */
-        margin: 10px 0; /* Reduce margin for smaller screens */
+        font-size: 15px;
+        margin: 10px 0;
     }
 
     .social {
-        padding: 10px; /* Reduce padding on smaller screens */
+        padding: 8px;
     }
 
     .sociallinks {
-        margin: 0 5px; /* Adjust spacing between social links */
-        padding: 8px; /* Reduce padding on smaller screens */
-        font-size: 20px; /* Adjust font size for smaller screens */
+        font-size: 20px;
+        padding: 5px;
     }
 }
-
-
-
